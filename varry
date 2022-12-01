@@ -1,0 +1,13 @@
+DECLARE
+    TYPE t_name_type IS VARRAY(2) 
+        OF VARCHAR2(20) NOT NULL;
+    t_names t_name_type  := t_name_type('John','Jane');
+    t_enames t_name_type := t_name_type();
+BEGIN
+    -- initialize to an empty array
+    dbms_output.put_line("The number of elements in t_enames " || t_enames.COUNT);
+    
+    -- initialize to an array of a elements 
+    dbms_output.put_line("The number of elements in t_names " || t_names.COUNT);
+END;
+/
